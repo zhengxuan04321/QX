@@ -25,10 +25,12 @@ server=/falogin.cn/system
 
 
 [policy]
-static=全球加速, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 俄罗斯节点, 韩国节点, 欧洲节点, 澳洲节点, 印度节点, proxy, img-url=https://gitee.com/a28413761/tupian/raw/master/Global.png
-static=苹果服务, direct, 香港节点, 台湾节点, 美国节点, 日本节点, 狮城节点, 俄罗斯节点, 韩国节点, 欧洲节点, 澳洲节点, 印度节点, proxy, img-url=https://gitee.com/a28413761/tupian/raw/master/Apple.png
-static=港台番剧, direct, 香港节点, 台湾节点, proxy, img-url=https://gitee.com/a28413761/tupian/raw/master/Bili.png
-static=国际流媒体, 香港节点, 台湾节点, 日本节点, 美国节点, 狮城节点, 俄罗斯节点, 韩国节点, 欧洲节点, 澳洲节点, 印度节点, proxy, img-url=https://gitee.com/a28413761/tupian/raw/master/YouTube.png
+static=Advertising, direct, proxy, reject, img-url=trash.system
+static=全球加速, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 俄罗斯节点, 韩国节点, 印度节点, proxy, img-url=https://gitee.com/a28413761/tupian/raw/master/Global.png
+static=国际流媒体, 香港节点, 台湾节点, 日本节点, 美国节点, 狮城节点, 俄罗斯节点, 韩国节点, 印度节点, proxy, img-url=https://gitee.com/a28413761/tupian/raw/master/YouTube.png
+static=Google, 美国节点, img-url=https://raw.githubusercontent.com/zhengxuan04321/QX/main/icon-main/Policy-Filter/Google.png
+static=BiliBili, direct, 香港节点, 台湾节点, proxy, img-url=https://gitee.com/a28413761/tupian/raw/master/Bili.png
+static=iQIYI, direct, 香港节点, 台湾节点, proxy, img-url=https://raw.githubusercontent.com/zhengxuan04321/QX/main/icon-main/taskicon/Aiqiyi.png
 url-latency-benchmark=香港节点, server-tag-regex=(?=.*(港|HK|(?i)Hong))^((?!(台湾|日|韩|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://gitee.com/a28413761/tupian/raw/master/HK.png
 url-latency-benchmark=美国节点, server-tag-regex=(?=.*(美|圣|US|(?i)States|American))^((?!(港|台湾|日|韩|新)).)*$, check-interval=600, tolerance=0, img-url=https://gitee.com/a28413761/tupian/raw/master/US.png
 url-latency-benchmark=日本节点, server-tag-regex=(?=.*(日|东京|JP|(?i)Japan))^((?!(港|台湾|韩|新|美|测试)).)*$, check-interval=600, tolerance=0, img-url=https://gitee.com/a28413761/tupian/raw/master/JP.png
@@ -36,36 +38,38 @@ url-latency-benchmark=狮城节点, server-tag-regex=(?=.*(新|狮|獅|SG|(?i)Si
 url-latency-benchmark=台湾节点, server-tag-regex=(?=.*(台湾|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://gitee.com/a28413761/tupian/raw/master/TW.png
 url-latency-benchmark=俄罗斯节点, server-tag-regex=(?=.*(俄罗斯|RU|(?i)RU))^((?!(港|日|韩|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://gitee.com/a28413761/tupian/raw/master/RU.png
 url-latency-benchmark=韩国节点, server-tag-regex=(?=.*(韩|KR|(?i)KR))^((?!(港|日|俄|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://gitee.com/a28413761/tupian/raw/master/KR.png
-url-latency-benchmark=欧洲节点, server-tag-regex=(?=.*(欧洲|UK|(?i)UK))^((?!(港|日|俄|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://gitee.com/a28413761/tupian/raw/master/UK.png
-url-latency-benchmark=澳洲节点, server-tag-regex=(?=.*(澳|AU|(?i)AU))^((?!(港|日|俄|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://gitee.com/a28413761/tupian/raw/master/AU.png
 url-latency-benchmark=印度节点, server-tag-regex=(?=.*(印|IN|(?i)IN))^((?!(港|日|俄|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/IN.png
-static=其他节点, 全球加速, direct, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 俄罗斯节点, 韩国节点, 欧洲节点, 澳洲节点, 印度节点, proxy, img-url=https://gitee.com/a28413761/tupian/raw/master/Final.png
+static=其他节点, 全球加速, direct, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 俄罗斯节点, 韩国节点, 印度节点, proxy, img-url=https://gitee.com/a28413761/tupian/raw/master/Final.png
 
 # > 服务器远程订阅
 [server_remote]
+https://mojie.info/api/v1/client/subscribe?token=81aff0c5b46ec2bf8ef5f479cdd87d82, tag=魔戒, update-interval=172800, opt-parser=false, enabled=true
+https://a2ix7zxj.infininode.tk/api/v1/client/subscribe?token=2058578300f4139e3d8f79081f5526b7, tag=ln, update-interval=172800, opt-parser=false, enabled=true
+https://subscribe.s7p7.top/link/fprFlNgZMA4HEVuO?list=quantumultx, tag=速🐢, update-interval=172800, opt-parser=false, enabled=false
+https://777777.cyou/api/v1/client/subscribe?token=924fbb993b30c317fa40fab216d6b621, tag=SE, update-interval=172800, opt-parser=false, enabled=false
+https://xn--4gq62f52gdss.com/api/v1/client/subscribe?token=b38c6c643532a727f0212fdb98368961, tag=一元机场, update-interval=172800, opt-parser=false, enabled=true
 
 # > 远程分流规则订阅
 [filter_remote]
-https://gitee.com/a28413761/QX/raw/master/fenliu.list, tag=广告拦截, update-interval=604800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list, tag=广告拦截Plus, update-interval=604800, opt-parser=false, enabled=true
+https://gitee.com/a28413761/QX/raw/master/fenliu.list, tag=广告拦截, force-policy=Advertising, update-interval=604800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list, tag=广告拦截Plus, update-interval=604800, opt-parser=false, enabled=false
 https://gitee.com/a28413761/QX/raw/master/guizexiuzheng.list, tag=规则修正, force-policy=direct, update-interval=604800, opt-parser=true, enabled=true
 https://gitee.com/a28413761/QX/raw/master/haiwaidouyin.list, tag=海外抖音, force-policy=全球加速, update-interval=604800, opt-parser=true, enabled=true
 https://gitee.com/a28413761/QX/raw/master/HK.list, tag=流媒体HK, force-policy=香港节点, update-interval=604800, opt-parser=true, enabled=true
 https://gitee.com/a28413761/QX/raw/master/TW.list, tag=流媒体TW, force-policy=台湾节点, update-interval=604800, opt-parser=true, enabled=true
 https://gitee.com/a28413761/QX/raw/master/JP.list, tag=流媒体JP, force-policy=日本节点, update-interval=604800, opt-parser=true, enabled=true
 https://gitee.com/a28413761/QX/raw/master/US.list, tag=流媒体US, force-policy=美国节点, update-interval=604800, opt-parser=true, enabled=true
-https://gitee.com/a28413761/QX/raw/master/Streaming.list, tag=国际媒体, force-policy=国际媒体, update-interval=604800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/zhengxuan04321/QX/main/filter/GN/BiliBili.list, tag=港台番剧, force-policy=港台番剧, update-interval=604800, opt-parser=true, enabled=true
+https://gitee.com/a28413761/QX/raw/master/Streaming.list, tag=国际媒体, force-policy=国际流媒体, update-interval=604800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/zhengxuan04321/QX/main/filter/GN/BiliBili.list, tag=港台番剧, force-policy=BiliBili, update-interval=604800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/iQIYI/iQIYI.list, tag=爱奇艺, force-policy=iQIYI, update-interval=604800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/zhengxuan04321/QX/main/filter/GW/Google.list, tag=Google, force-policy=Google, update-interval=172800, opt-parser=false, enabled=true
 https://gitee.com/a28413761/QX/raw/master/Global.list, tag=全球加速, force-policy=全球加速, update-interval=604800, opt-parser=true, enabled=true
-https://gitee.com/a28413761/QX/raw/master/AppStore.list, tag=苹果服务, force-policy=苹果服务, update-interval=604800, opt-parser=true, enabled=true
-https://gitee.com/a28413761/QX/raw/master/China.txt, tag=国内网站, force-policy=direct, update-interval=604800, opt-parser=true, enabled=true
-https://gitee.com/a28413761/QX/raw/master/chinaipv4.txt#type=rule, tag=ChinaIPv4, force-policy=direct, update-interval=604800, opt-parser=true, enabled=true
-https://gitee.com/a28413761/QX/raw/master/chinaipv6.txt#type=rule, tag=ChinaIPv6, force-policy=direct, update-interval=604800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/zhengxuan04321/QX/main/filter/GN/ChinaIP.list, tag=国内IP, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
 
 # > 远程重写规则订阅
 [rewrite_remote]
 https://gitee.com/a28413761/QX/raw/master/chongxie.txt, tag=广告拦截, update-interval=604800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.conf, tag=广告拦截Plus, update-interval=604800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Advertising/Advertising.conf, tag=广告拦截Plus, update-interval=604800, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/zhengxuan04321/QX/main/rewrite/TikTokJP.conf, tag=TikTok解锁, update-interval=86400, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/zhengxuan04321/QX/main/rewrite/Keep.conf, tag=KeepVip, update-interval=172800, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/zhengxuan04321/QX/main/rewrite/vip.conf, tag=vip韩剧 扫描王 白描, update-interval=172800, opt-parser=false, enabled=false
@@ -75,6 +79,10 @@ https://raw.githubusercontent.com/zhengxuan04321/QX/main/rewrite/vip.conf, tag=v
 
 # > 本地分流规则
 [filter_local]
+host-suffix, p3-ppx-sign.byteimg.com, direct
+host-suffix, p6-ppx-sign.byteimg.com, direct
+host-suffix, p9-ppx.byteimg.com, direct
+host-suffix, p3-ppx.byteimg.com, direct
 host-keyword, huichuan-mc.sm.cn, reject
 host-keyword, knockout, reject
 host-suffix, miaozhen.com, direct
@@ -110,10 +118,10 @@ https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, host=b
 
 # > 本地主机名
 [mitm]
-hostname = mpos-pic.helipay.com, fc-video.cdn.bcebos.com, img11.360buyimg.com, huichuan-mc.sm.cn, 360buyimg.com, m15.360buyimg.com, static.xinyue.qq.com, 
+hostname = mpos-pic.helipay.com, fc-video.cdn.bcebos.com, img11.360buyimg.com, huichuan-mc.sm.cn, 360buyimg.com, m15.360buyimg.com, static.xinyue.qq.com
 
 # > 证书参数
-passphrase = 
-p12 = 
+passphrase = 7E44A8F4
+p12 = MIILwwIBAzCCC40GCSqGSIb3DQEHAaCCC34Eggt6MIILdjCCBc8GCSqGSIb3DQEHBqCCBcAwggW8AgEAMIIFtQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQI2oaB/OHc6sYCAggAgIIFiFtAq8ehcBODcDwMNyOGGVo7xQ9wkGlEpBGHP3rf1DD3Xf5ED5EVpyKzLUUCU7Av1r1U5TORNU5PJJ0AHGFxAcU3qvqLdvVtJM10JTrBufb3Uk8ubCTo/VJMY/l3HZPufEKtrf1CPO3H2GDv67Yb9Tyf1llLYGRaJ7Vl1ib3be1ZTUH2y1flbaH6MY08bhumTYEht9oCL8y2FjLhQD1Py/MD0miVDSbk6IcPvDxZASeRDeZJobN+aUo5Oh/faV5rLii8Ml040oJln0YGEO/0qaDVI1aptHVlTF+a+d/4un8pqXbPAthisL2LkMfkz/KUaNsV8ttE8J3T8CmKbGJj1z+oOA8dwkovzK7Q92A53L/dFFeP/Mc8kkLS1i+9aGvSONWS9ZRbu+DVoQzt6cjFzHo01SzGOCgyqDnmYDuYZF7nUeyAHeiHmPGniWw6zDpVNGKNNMttyJnbZZQTQXeQTWJctxJPgKR0jeWCXGiC/ZOQlAm3vCw5j++ObpCm4cf5XphDFxc9MX6NtVkQE9iTg4N2gheIN3z/sHnHnuvH6qAo6XgflVE1dwauozC8KsK3acSEu37PfFP1GzoL09MOH5Vgg7LnAQNe5NT+FKofCGy1L9qfK8wP6g0FYurA/8Hk/y3BxJWjfQizmWbRVWZ/VhwxKekJi2NZHFqcJUIp27g7vg0aTXEIl8bWaL/D1IKTai+PB6VJ3omNIHjvmlI0ywds2eNpUSeeR33w8jHReoOSERQb36RyF1xr5wWxSWwrBOaP9ItGXtR3Cy3TEIJ5MrJ8AwznPY9VCmI9/0MMh30xo9GEyghWXqBagJqoVx1ua/KswzpGV4D0PUJ/oXGqVkb1TBg46hks7HWY67Zvl69oUz7yiIgAdKDL+OtaBKxNn1FP3B2lkw9McVdx++TTQe4VJeLiUrw++hAgpFPiWtFRR2CdILBdPkjCyrZ3H+AcNMxOZg7kBLcRhpm/7o3rpH4PsxWsBTTJYLMJ8tPJjt8er1QUxCvTGxgHP4uXghpjNXUGpA1bVpMaO5HgYIPoZErQINmP97U1K3n/sgGgkxhgOMrLnCkwLz1TJGDggPM+L2ytkxtxd67AlNEfhXcGx7j+xsZRkCsJbqIcIB6XsjMBSDE02oesFBHyF41dUjrtrhePiNn8tY8THspI+neR33w4NLTd2eUrBrwF7GdDK49lEUgmEusAEUR85Kd0ekPqpDTkXWh0xLW0rZObVHlPnIZmCuD2bKBf9m7dg2CUfue7+TxPgxZGSpTPRwtGTetSrxgdF2VnHDvHj4ig5xW9EjELbxsYQM8XCzyQ5IagEsvo2hsm07Jep+zsk9L+YqZWXd0PyobCf3Fz7b1AATniGhW6faqYVG77xfOvAzT+xdBGpw8PiMX8Fp+M/B3cnS55UoRXTsbSrfNFq03jwJuckDHzbvdXdoJ2VCg6n2FBT2w3I3rmWCQi9pns75xV7uK6BKqo/2fs4WOkaIzRAsXoxLQ+VYAnENjdcPjJuKIFO0IoiNDAFXMECB2wVnKiakYIzRGBytpq4vgDNVp34EGVnmsYWMlr8oMwrlQHAz0CfgAlKyFqqfQoP+tVvbmyN4XkC8pnc7KjsstTgzgOgbvEA0R2+xTErk/Qpx3HtYdye90xei61oGklLr56G5qNMukuMvmvgZm7fnpZTN2uwXIsMlrkL6oWHbK3lAr8D9qG4z9roLDFSIjZFT+/WrK7KV81TzX8twBrsevghZ9ppm6hbzqrdr+NVdW2Dobt33kuuH9Mkw0hp0CPbrqF61f2si2/1s+Mf3hQswIa4Ta9M8+cCZBMProx8EVv2q1R5/1SjJnxHqiZPU2HpgwaA/zS3QR7yepnt/iDcqiXM8xhBqzI8L63KvvuT5fhCTCCBZ8GCSqGSIb3DQEHAaCCBZAEggWMMIIFiDCCBYQGCyqGSIb3DQEMCgECoIIE7jCCBOowHAYKKoZIhvcNAQwBAzAOBAguT2/4NVV9AwICCAAEggTIr7SILXg7+Z9YNrBQjf507q9QPINc+N5N41G5Noy4VbdMegAkv1TGHzXhGcuBnoWm3LgOlfbqyS9wvuWM2aTaUAEv5kexJxremAiI09u6jwLPy5Y2lUyjNJXMFyUpATNy7dcnjp6quO43odsQW8Ng5AEBiiwpLWLgdj6+fYHUThDnKOUpUP3I+qpuJ5ovwJ3c5Hz7SKr7XPJ8xCJA2e9VxK2yDVXWJUdj2zuF0oh2w/nhRSOIssl0vN3uSUJvdk/BI276Eb3xV9chcISmpfSJKI3waS1c+bV6OqAzJoTDsG8xYm8l1z8yPpqJLVpLrYZ77262zJ7yswjIQxtWaznx0q9Ma1dRUstZYsxhqc4hsugzgXgQnaD2xYo4u1Rm2QSEc9EUS12umHSvZeOYSVGxKZ8jwC2bI2Ng69GFPc7T81tfdxRcnchqXomVNWw2/2YrNB5dVGJd5IvFyYV6ymbXLUEfsa0hmjXOvi6s3DYFFsjdy3mqbV2cmvADkCKgLCXuv/+Q7FHDdgqfQJLUq99VJO1IxpuIhRzo0jf89H7X8eJB1xX2Ua2gd/6QrgitttrA8UIJnXKm4+k9Q1CmkvZ6Ydwlyhv5wlbyitk+AxTDSnenYZW3eHlFdn5SVrYyyyvuZkLjOJaj1hDyrhsWS9rKfNCY14VDR9XppTPEG65+GKb4WJYyfZlIbBcHkoT3zMcgHOjlt2dYirPFq8GvePyS0U19W2UAYe7Mv1JswtMUbFtp/lEmc1jpdtQVFmHE2WSARNck7YoI0FmzYLD7GVE3trBANTFKXFg9Ifux9rwNmfmyE5GwUsZbZ886e9mirtpu6ktvqRfBVGb+YFjKWnnd/Qk/99hwKrt4yUWj/3NApXvvfQcoYoNF6MkJesMet4+sJe8870vTeaiVbJ8j4Pvn6vln667rRUiRiCFjUfL1ihuCiZf0badXzM8h28s4KPA+2PP8rTNbRfA5VAnELp6XZlBB7cOzrZN0TZ5hdMnbgE7Dhx0Ss1DNl2xxoLzik3a5PUlO+CZ1kGCK41bqbSFEuaKgJzHEfo2hvFEw0OixDeXLJE1WPWDzjCejiLHwbPnK6ifU/p+LHMathhRNwVzyuR7u9iQDBusHd6Ejgudrf4ppDCjF8vZ0ALd3rA4GR/+er3r8JN4O0N7c/4rUh94DtIgCuHDAUEePJ4Yf3ZohSdV3OqPlvwDYQZr2U3Vw/57e10aks3kvJVcJDZ5L7Z2+qtJdX1xBJGAY5Qf+4NWpuk80X8FKplsBlze7G+ohlw2uVchJsM3XIvtqyTHvKvdi7A4adJ+2YASz6jv8O5lW/t8xquKtfnRprZ8ij2tC29eZbLCPiJE5wY/e6nYATvzoykKDdlm1tSsIDl6AUNrsOkc9WhMQVbyplxrfB98E9yUTFhKcqTVB9G0m97SWVypDgBC1tVPmQYrWL6WIBOAU/ijwvnmqV/f9XHqJVTFlzcgzTvywEVzViDy7m9nfkShNJLVABikA4eTvDyaqzuxaw36CeuxGSn8SXhAafrD6ZmjhFh/E8PQHwleujXvS5pMOEv+mbWtNwIqdeXjL5zZdMq2Ub2+/G3r7EbrBy1aLjbkshIXaS1msFgG5+13r7vZ87vqoUfwAvLFBMYGCMCMGCSqGSIb3DQEJFTEWBBRn2aBv2RaLGd9PIsr2Bfk4OiE3NjBbBgkqhkiG9w0BCRQxTh5MAFEAdQBhAG4AdAB1AG0AdQBsAHQAIABYACAAQwBBACAAQwBFADcANwA0ADQANAA5ACAAKAAxADAAIABNAGEAeQAgADIAMAAyADIAKTAtMCEwCQYFKw4DAhoFAAQUdLp2cp1sqgOgr3suYWFwW2cq3ZoECARoCZNVKgwK
 
 skip_validating_cert = true
